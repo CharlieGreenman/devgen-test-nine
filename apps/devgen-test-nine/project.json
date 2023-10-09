@@ -1,0 +1,95 @@
+{
+  "name": "devgen-test-nine",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/devgen-test-nine/src",
+  "prefix": "devgen-test-nine",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/devgen-test-nine",
+        "index": "apps/devgen-test-nine/src/index.html",
+        "main": "apps/devgen-test-nine/src/main.ts",
+        "polyfills": "apps/devgen-test-nine/src/polyfills.ts",
+        "tsConfig": "apps/devgen-test-nine/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/devgen-test-nine/src/favicon.ico",
+          "apps/devgen-test-nine/src/assets"
+        ],
+        "styles": ["apps/devgen-test-nine/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/devgen-test-nine/src/environments/environment.ts",
+              "with": "apps/devgen-test-nine/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "devgen-test-nine:build:production"
+        },
+        "development": {
+          "browserTarget": "devgen-test-nine:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "devgen-test-nine:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/devgen-test-nine/src/**/*.ts",
+          "apps/devgen-test-nine/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/devgen-test-nine"],
+      "options": {
+        "jestConfig": "apps/devgen-test-nine/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
