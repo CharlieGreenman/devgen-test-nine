@@ -38,6 +38,9 @@
       ],
       "@devgen-test-nine/data-services": [
         "libs/data-services/src/index.ts"
+      ],
+      "@devgen-test-nine/data-graphql": [
+        "libs/data-graphql/src/index.ts"
       ]
     }
   },
