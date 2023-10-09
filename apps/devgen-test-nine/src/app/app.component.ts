@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  sideNavOpen = false;
   title = 'devgen-test-nine';
+
+  sideNavToggle(): void {
+    this.sideNavOpen = !this.sideNavOpen;
+  }
 }
