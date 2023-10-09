@@ -20,6 +20,9 @@
     "paths": {
       "@devgen-test-nine/common/styles": [
         "libs/common/styles/src/index.ts"
+      ],
+      "@devgen-test-nine/common/ui": [
+        "libs/common/ui/src/index.ts"
       ]
     }
   },
