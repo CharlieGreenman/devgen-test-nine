@@ -44,6 +44,9 @@
       ],
       "@devgen-test-nine/data-models": [
         "libs/data-models/src/index.ts"
+      ],
+      "@devgen-test-nine/common/common-environment": [
+        "libs/common/common-environment/src/index.ts"
       ]
     }
   },
