@@ -7,6 +7,7 @@ import { AppRoutingModule } from "./routing/app-routing.module";
 import { GlobalHeaderComponentModule } from "@devgen-test-nine/common/ui";
 import { GlobalFooterModule } from "@devgen-test-nine/common/ui";
 import { GlobalSidenavModule } from "@devgen-test-nine/common/ui";
+import { StoreRouterConnectingModule, routerReducer } from "@ngrx/router-store";
 
 @NgModule({
   declarations: [AppComponent],
