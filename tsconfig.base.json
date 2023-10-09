@@ -35,6 +35,9 @@
       ],
       "@devgen-test-nine/data-access": [
         "libs/data-access/src/index.ts"
+      ],
+      "@devgen-test-nine/data-services": [
+        "libs/data-services/src/index.ts"
       ]
     }
   },
