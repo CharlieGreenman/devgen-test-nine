@@ -26,6 +26,9 @@
       ],
       "@devgen-test-nine/home": [
         "libs/home/src/index.ts"
+      ],
+      "@devgen-test-nine/common/common-services": [
+        "libs/common/common-services/src/index.ts"
       ]
     }
   },
